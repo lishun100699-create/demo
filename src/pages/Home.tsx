@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Draggable } from 'react-draggable';
+import Draggable from 'react-draggable';
 import { Howl } from 'howler';
 import { motion, useAnimation } from 'framer-motion';
 
