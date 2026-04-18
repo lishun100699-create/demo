@@ -123,7 +123,7 @@ export default function Home() {
                 className="relative"
               >
                 <img 
-                  src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=cute%20milk%20dragon%20cartoon%20character%2C%20yellow%20color%2C%20big%20eyes%2C%20happy%20expression%2C%20high%20quality%20illustration&image_size=square_hd" 
+                  src="https://bkimg.cdn.bcebos.com/pic/9922720e0cf3d7ca7bcbc1a4af47a9096b63f7240392" 
                   alt="奶龙" 
                   className="w-64 h-64 object-contain"
                 />
