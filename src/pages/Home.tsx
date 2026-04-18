@@ -8,7 +8,7 @@ export default function Home() {
   const [distance, setDistance] = useState(100);
   const [isDragging, setIsDragging] = useState(false);
   const [isDropped, setIsDropped] = useState(false);
-  const垃圾桶Ref = useRef<HTMLDivElement>(null);
+  const trashCanRef = useRef<HTMLDivElement>(null);
   const productRef = useRef<HTMLDivElement>(null);
   const controls = useAnimation();
   
@@ -30,14 +30,14 @@ export default function Home() {
   
   // 计算距离并更新奶龙反应
   useEffect(() => {
-    if (isDragging && 垃圾桶Ref.current && productRef.current) {
-      const 垃圾桶Rect = 垃圾桶Ref.current.getBoundingClientRect();
+    if (isDragging && trashCanRef.current && productRef.current) {
+      const trashCanRect = trashCanRef.current.getBoundingClientRect();
       const productRect = productRef.current.getBoundingClientRect();
       
-      const 垃圾桶CenterX = 垃圾桶Rect.left + 垃圾桶Rect.width / 2;
+      const trashCanCenterX = trashCanRect.left + trashCanRect.width / 2;
       const productCenterX = productRect.left + productRect.width / 2;
       
-      const newDistance = Math.max(0, 垃圾桶CenterX - productCenterX);
+      const newDistance = Math.max(0, trashCanCenterX - productCenterX);
       setDistance(newDistance);
       
       // 根据距离调整声音和动画
@@ -151,7 +151,7 @@ export default function Home() {
             {/* 垃圾桶区域 */}
             <div className="md:w-1/2 flex justify-center">
               <div 
-                ref={垃圾桶Ref}
+                ref={trashCanRef}
                 className="relative"
               >
                 <img 
