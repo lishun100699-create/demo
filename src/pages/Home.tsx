@@ -122,11 +122,30 @@ export default function Home() {
                 animate={controls}
                 className="relative"
               >
-                <img 
-                  src="https://bkimg.cdn.bcebos.com/pic/9922720e0cf3d7ca7bcbc1a4af47a9096b63f7240392" 
-                  alt="奶龙" 
-                  className="w-64 h-64 object-contain"
-                />
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  width="256" 
+                  height="256" 
+                  viewBox="0 0 256 256" 
+                  className="w-64 h-64"
+                >
+                  <defs>
+                    <linearGradient id="milkDragonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#FFD700" stopOpacity="1" />
+                      <stop offset="100%" stopColor="#FFA500" stopOpacity="1" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="128" cy="128" r="100" fill="url(#milkDragonGradient)" />
+                  <circle cx="98" cy="108" r="15" fill="white" />
+                  <circle cx="158" cy="108" r="15" fill="white" />
+                  <circle cx="98" cy="108" r="8" fill="black" />
+                  <circle cx="158" cy="108" r="8" fill="black" />
+                  <path d="M90 140 Q128 160 166 140" stroke="black" strokeWidth="4" fill="none" />
+                  <path d="M70 180 Q128 200 186 180" stroke="black" strokeWidth="3" fill="none" />
+                  <path d="M50 130 Q30 150 50 170" stroke="url(#milkDragonGradient)" strokeWidth="8" fill="none" />
+                  <path d="M206 130 Q226 150 206 170" stroke="url(#milkDragonGradient)" strokeWidth="8" fill="none" />
+                  <path d="M128 180 Q128 220 128 240" stroke="url(#milkDragonGradient)" strokeWidth="8" fill="none" />
+                </svg>
                 {!isDropped && (
                   <Draggable
                     onStart={handleStart}
